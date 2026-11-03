@@ -249,21 +249,21 @@ float CDemodOptions::getPllBw(void) const
 
 void CDemodOptions::on_pllBwSelector_activated(int index)
 {
-    emit amSyncPllBwSelected(pll_bw_from_index(index));
+    emit aSyncPllBwSelected(pll_bw_from_index(index));
 }
 
 // Basic TX Support - Modulation and Transmission Control Options
 void CDemodOptions::setTxMode(int mode)
 {
-    ui->modSelector->setCurrentIndex(mode);
+    ui->emphSelector->setCurrentIndex(mode);
 }
 
 int CDemodOptions::getTxMode() const
 {
-    return ui->modSelector->currentIndex();
+   return ui->emphSelector->currentIndex();
 }
 
-void CDemodOptions::on_modSelector_activated(int index)
+void CDemodOptions::on_emphSelector_activated(int index)
 {
     emit txModeSelected(index);
 
